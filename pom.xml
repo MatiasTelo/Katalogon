@@ -57,7 +57,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>${exec.mainClass}</mainClass>
+                    <mainClass>com.mycompany.katalogon.Katalogon</mainClass>
                 </configuration>
             </plugin>
         </plugins>
