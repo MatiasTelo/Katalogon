@@ -1,3 +1,4 @@
+com\mycompany\katalogon\HibernateUtil.class
 Entities\Articulo.class
 com\mycompany\katalogon\Katalogon.class
 Entities\Articulo$ArticuloBuilder.class
