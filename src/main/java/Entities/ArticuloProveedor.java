@@ -1,0 +1,43 @@
+package Entities;
+
+import jakarta.persistence.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.Setter;
+
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "articulo_proveedor")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class ArticuloProveedor {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "cargos_pedido")
+    private Integer cargosPedido;
+
+    @Column(name = "demora_entrega")
+    private Integer demoraEntrega;
+
+    @Column(name = "fecha_hora_baja")
+    private LocalDateTime fechaHoraBaja;
+
+    @Column(name = "precio_unitario")
+    private Integer precioUnitario;
+
+    @ManyToOne
+    @JoinColumn(name = "articulo_id")
+    private Articulo articulo;
+
+    @ManyToOne
+    @JoinColumn(name = "proveedor_id")
+    private Proveedor proveedor;
+}

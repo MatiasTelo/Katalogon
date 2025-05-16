@@ -23,6 +23,17 @@
 
         <!-- Escaneo de clases -->
         <mapping class="Entities.Articulo"/>
+        <mapping class="Entities.ConfiguracionGestionInventario"/>
+        <mapping class="Entities.ModeloInventario"/>
+        <mapping class="Entities.VentaArticulo"/>
+        <mapping class="Entities.Venta"/>
+        <mapping class="Entities.Proveedor"/>
+        <mapping class="Entities.ArticuloProveedor"/>
+        <mapping class="Entities.OrdenCompra"/>
+        <mapping class="Entities.OCArticuloProveedor"/>
+        <mapping class="Entities.OrdenCompraEstado"/>
+        <mapping class="Entities.EstadoOrdenCompra"/>
+
 
     </session-factory>
 </hibernate-configuration>

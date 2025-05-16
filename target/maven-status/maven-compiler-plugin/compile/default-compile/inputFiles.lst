@@ -1,3 +1,13 @@
-D:\Program\NetBeansProjects\Katalogon\src\main\java\com\mycompany\katalogon\Katalogon.java
-D:\Program\NetBeansProjects\Katalogon\src\main\java\Entities\Articulo.java
-D:\Program\NetBeansProjects\Katalogon\src\main\java\HibernateUtil.java
+C:\Users\Ezequiel\Documents\UTN\Cuarto Año\Investigación Operativa\Katalogon\src\main\java\com\mycompany\katalogon\Katalogon.java
+C:\Users\Ezequiel\Documents\UTN\Cuarto Año\Investigación Operativa\Katalogon\src\main\java\Entities\Articulo.java
+C:\Users\Ezequiel\Documents\UTN\Cuarto Año\Investigación Operativa\Katalogon\src\main\java\Entities\ArticuloProveedor.java
+C:\Users\Ezequiel\Documents\UTN\Cuarto Año\Investigación Operativa\Katalogon\src\main\java\Entities\ConfiguracionGestionInventario.java
+C:\Users\Ezequiel\Documents\UTN\Cuarto Año\Investigación Operativa\Katalogon\src\main\java\Entities\EstadoOrdenCompra.java
+C:\Users\Ezequiel\Documents\UTN\Cuarto Año\Investigación Operativa\Katalogon\src\main\java\Entities\ModeloInventario.java
+C:\Users\Ezequiel\Documents\UTN\Cuarto Año\Investigación Operativa\Katalogon\src\main\java\Entities\OCArticuloProveedor.java
+C:\Users\Ezequiel\Documents\UTN\Cuarto Año\Investigación Operativa\Katalogon\src\main\java\Entities\OrdenCompra.java
+C:\Users\Ezequiel\Documents\UTN\Cuarto Año\Investigación Operativa\Katalogon\src\main\java\Entities\OrdenCompraEstado.java
+C:\Users\Ezequiel\Documents\UTN\Cuarto Año\Investigación Operativa\Katalogon\src\main\java\Entities\Proveedor.java
+C:\Users\Ezequiel\Documents\UTN\Cuarto Año\Investigación Operativa\Katalogon\src\main\java\Entities\Venta.java
+C:\Users\Ezequiel\Documents\UTN\Cuarto Año\Investigación Operativa\Katalogon\src\main\java\Entities\VentaArticulo.java
+C:\Users\Ezequiel\Documents\UTN\Cuarto Año\Investigación Operativa\Katalogon\src\main\java\HibernateUtil.java
