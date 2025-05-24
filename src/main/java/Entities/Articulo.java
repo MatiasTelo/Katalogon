@@ -36,6 +36,12 @@ public class Articulo {
 
     @Column(name = "stock_seguridad")
     private Integer stockSeguridad;
+    
+    @Column(name = "demanda")
+    private Integer demanda;
+    
+    @Column(name = "costo_mantenimiento")
+    private float costoMantenimiento;
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "proveedor_predeterminado_id")
@@ -49,4 +55,6 @@ public class Articulo {
     )
     private List<Proveedor> proveedores;
 
+    
+    
 }

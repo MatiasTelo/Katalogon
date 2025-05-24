@@ -22,9 +22,6 @@ public class ArticuloProveedor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "cargos_pedido")
-    private Integer cargosPedido;
-
     @Column(name = "demora_entrega")
     private Integer demoraEntrega;
 
@@ -33,6 +30,9 @@ public class ArticuloProveedor {
 
     @Column(name = "precio_unitario")
     private Integer precioUnitario;
+    
+    @Column(name = "costo_pedido")
+    private float costoPedido;
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "articulo_id")
