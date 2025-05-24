@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "articulo_proveedor")
@@ -33,11 +34,19 @@ public class ArticuloProveedor {
     @Column(name = "precio_unitario")
     private Integer precioUnitario;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     @JoinColumn(name = "articulo_id")
     private Articulo articulo;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     @JoinColumn(name = "proveedor_id")
     private Proveedor proveedor;
+    
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "modelo_id")
+    private ModeloInventario modeloInventario;
+    
+    @OneToMany(mappedBy = "articulo_proveedor")
+    private List<ConfiguracionGestionInventario> configuracion;
+    
 }

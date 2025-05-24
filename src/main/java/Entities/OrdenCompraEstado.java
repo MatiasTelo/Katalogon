@@ -28,10 +28,10 @@ public class OrdenCompraEstado {
     private LocalDateTime fechaHoraInicio;
 
     @ManyToOne
-    @JoinColumn(name = "orden_compra_id")
-    private OrdenCompra ordenCompra;
-
-    @ManyToOne
     @JoinColumn(name = "estado_orden_compra_id")
     private EstadoOrdenCompra estadoOrdenCompra;
+    
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "ordencompra_id")
+    private OrdenCompra orden_compra;
 }

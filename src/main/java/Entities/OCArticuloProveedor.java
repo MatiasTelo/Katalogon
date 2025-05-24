@@ -25,10 +25,10 @@ public class OCArticuloProveedor {
     private Integer cantidad;
 
     @ManyToOne
-    @JoinColumn(name = "orden_compra_id")
-    private OrdenCompra ordenCompra;
-
-    @ManyToOne
     @JoinColumn(name = "articulo_proveedor_id")
     private ArticuloProveedor articuloProveedor;
+    
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "ordencompra_id")
+    private OrdenCompra orden_compra;
 }

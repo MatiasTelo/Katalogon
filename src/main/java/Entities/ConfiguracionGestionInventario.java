@@ -27,19 +27,16 @@ public class ConfiguracionGestionInventario {
     @Column(name = "fecha_hora_alta_configuracion")
     private LocalDateTime fechaHoraAltaConfiguracion;
 
-    @Column(name = "inventario_maximo")
-    private Integer inventarioMaximo;
-
     @Column(name = "lote_optimo")
     private Integer loteOptimo;
 
     @Column(name = "punto_pedido")
     private Integer puntoPedido;
+    
+    @Column(name = "tiempo_intervalo")
+    private Integer tiempoIntervalo;
 
-    @Column(name = "stock_seguridad")
-    private Integer stockSeguridad;
-
-    @ManyToOne
-    @JoinColumn(name = "modelo_inventario_id")
-    private ModeloInventario modeloInventario;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "articulo_proveedor_id")
+    private ArticuloProveedor articulo_proveedor;
 }

@@ -31,29 +31,22 @@ public class Articulo {
     @Column(name = "inventario_maximo")
     private Integer inventarioMaximo;
 
-    @Column(name = "lote_optimo")
-    private Integer loteOptimo;
-
-    @Column(name = "punto_pedido")
-    private Integer puntoPedido;
-
     @Column(name = "stock_actual")
     private Integer stockActual;
 
     @Column(name = "stock_seguridad")
     private Integer stockSeguridad;
 
-    @ManyToOne
-    @JoinColumn(name = "configuracion_id")
-    private ConfiguracionGestionInventario configuracion;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "proveedor_predeterminado_id")
+    private Proveedor proveedorPredeterminado;
+    
+    @ManyToMany
+    @JoinTable(
+        name = "lista_proveedores",
+        joinColumns = @JoinColumn(name = "articulo_id"),
+        inverseJoinColumns = @JoinColumn(name = "proveedor_id")
+    )
+    private List<Proveedor> proveedores;
 
-    @OneToMany(mappedBy = "articulo")
-    private List<VentaArticulo> ventas;
-
-    @OneToMany(mappedBy = "articulo")
-    private List<ArticuloProveedor> articuloProveedores;
-
-    @OneToOne
-    @JoinColumn(name = "proveedor_determinado_id")
-    private Proveedor proveedorDeterminado;
 }

@@ -27,8 +27,8 @@ public class VentaArticulo {
     @ManyToOne
     @JoinColumn(name = "articulo_id")
     private Articulo articulo;
-
-    @ManyToOne
+    
+    @ManyToOne(optional = false)
     @JoinColumn(name = "venta_id")
     private Venta venta;
 }
