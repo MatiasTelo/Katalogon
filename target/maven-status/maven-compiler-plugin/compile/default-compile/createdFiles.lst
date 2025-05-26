@@ -1,9 +1,12 @@
+DAO\ArticuloProveedorDAO.class
 Entities\ArticuloProveedor$ArticuloProveedorBuilder.class
 Entities\Venta$VentaBuilder.class
 Entities\Proveedor$ProveedorBuilder.class
+DAO\ConfiguracionGestionInventarioDAO.class
 Entities\ModeloInventario.class
 Entities\OrdenCompraEstado.class
 Entities\VentaArticulo$VentaArticuloBuilder.class
+DAO\ArticuloDAO.class
 Entities\Proveedor.class
 Entities\EstadoOrdenCompra.class
 Entities\OrdenCompra$OrdenCompraBuilder.class
@@ -11,6 +14,7 @@ Entities\EstadoOrdenCompra$EstadoOrdenCompraBuilder.class
 Entities\ArticuloProveedor.class
 Entities\OCArticuloProveedor.class
 Entities\OCArticuloProveedor$OCArticuloProveedorBuilder.class
+Service\ArticuloService.class
 com\mycompany\katalogon\HibernateUtil.class
 Entities\OrdenCompraEstado$OrdenCompraEstadoBuilder.class
 Entities\Articulo.class
