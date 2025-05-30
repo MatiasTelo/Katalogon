@@ -1,12 +1,15 @@
 D:\Program\NetBeansProjects\Katalogon\src\main\java\Service\ProveedorService.java
 D:\Program\NetBeansProjects\Katalogon\src\main\java\DAO\ConfiguracionGestionInventarioDAO.java
+D:\Program\NetBeansProjects\Katalogon\src\main\java\UI\ListadoArticulos.java
+D:\Program\NetBeansProjects\Katalogon\src\main\java\UI\ListadoProveedores.java
 D:\Program\NetBeansProjects\Katalogon\src\main\java\Entities\VentaArticulo.java
+D:\Program\NetBeansProjects\Katalogon\src\main\java\UI\ProveedorForm.java
 D:\Program\NetBeansProjects\Katalogon\src\main\java\Entities\ConfiguracionGestionInventario.java
 D:\Program\NetBeansProjects\Katalogon\src\main\java\Entities\EstadoOrdenCompra.java
+D:\Program\NetBeansProjects\Katalogon\src\main\java\UI\ArticuloFrom.java
 D:\Program\NetBeansProjects\Katalogon\src\main\java\DAO\ArticuloDAO.java
 D:\Program\NetBeansProjects\Katalogon\src\main\java\Entities\Articulo.java
 D:\Program\NetBeansProjects\Katalogon\src\main\java\Service\ArticuloService.java
-D:\Program\NetBeansProjects\Katalogon\src\main\java\HibernateUtil.java
 D:\Program\NetBeansProjects\Katalogon\src\main\java\Entities\OCArticuloProveedor.java
 D:\Program\NetBeansProjects\Katalogon\src\main\java\DAO\ArticuloProveedorDAO.java
 D:\Program\NetBeansProjects\Katalogon\src\main\java\Entities\Proveedor.java
@@ -15,5 +18,6 @@ D:\Program\NetBeansProjects\Katalogon\src\main\java\Entities\ArticuloProveedor.j
 D:\Program\NetBeansProjects\Katalogon\src\main\java\Entities\OrdenCompraEstado.java
 D:\Program\NetBeansProjects\Katalogon\src\main\java\com\mycompany\katalogon\Katalogon.java
 D:\Program\NetBeansProjects\Katalogon\src\main\java\Entities\Venta.java
+D:\Program\NetBeansProjects\Katalogon\src\main\java\UI\MainMenu.java
 D:\Program\NetBeansProjects\Katalogon\src\main\java\Entities\ModeloInventario.java
 D:\Program\NetBeansProjects\Katalogon\src\main\java\DAO\ProveedorDAO.java

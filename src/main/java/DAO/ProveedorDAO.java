@@ -48,7 +48,7 @@ public class ProveedorDAO {
 
     public List<Proveedor> listarTodos() {
         EntityManager em = emf.createEntityManager();
-        List<Proveedor> lista = em.createQuery("SELECT p FROM Proveedor p", Proveedor.class).getResultList();
+        List<Proveedor> lista = em.createQuery("SELECT p FROM Proveedor p WHERE p.fechaHoraBaja is null", Proveedor.class).getResultList();
         em.close();
         return lista;
     }

@@ -1,4 +1,4 @@
-package Services;
+package Service;
 
 import DAO.ProveedorDAO;
 import Entities.Proveedor;
