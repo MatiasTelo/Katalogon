@@ -39,6 +39,7 @@ public class ArticuloFrom extends javax.swing.JFrame {
         txtCodArt = new javax.swing.JTextField();
         txtDescArt = new javax.swing.JTextField();
         comboProveedores = new javax.swing.JComboBox<>();
+        siguientebtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -102,6 +103,8 @@ public class ArticuloFrom extends javax.swing.JFrame {
 
         comboProveedores.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        siguientebtn.setText("Siguiente");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -109,7 +112,6 @@ public class ArticuloFrom extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
@@ -128,7 +130,12 @@ public class ArticuloFrom extends javax.swing.JFrame {
                             .addComponent(txtStockSeguridadArt)
                             .addComponent(txtDemandaArt)
                             .addComponent(txtCostoMantArt)
-                            .addComponent(comboProveedores, 0, 211, Short.MAX_VALUE))))
+                            .addComponent(comboProveedores, 0, 211, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addComponent(siguientebtn))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -166,7 +173,9 @@ public class ArticuloFrom extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(comboProveedores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addComponent(siguientebtn)
+                .addContainerGap())
         );
 
         pack();
@@ -219,6 +228,7 @@ public class ArticuloFrom extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JButton siguientebtn;
     private javax.swing.JTextField txtCodArt;
     private javax.swing.JTextField txtCostoMantArt;
     private javax.swing.JTextField txtDemandaArt;

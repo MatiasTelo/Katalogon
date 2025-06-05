@@ -1,38 +1,35 @@
-
 package Service;
 
-import Entities.Articulo;
-import Entities.ArticuloProveedor;
-import Entities.ConfiguracionGestionInventario;
 import DAO.ArticuloDAO;
-import DAO.ArticuloProveedorDAO;
-import DAO.ConfiguracionGestionInventarioDAO;
+import Entities.Articulo;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 public class ArticuloService {
 
     private final ArticuloDAO articuloDAO;
-    private final ArticuloProveedorDAO articuloProveedorDAO;
-    private final ConfiguracionGestionInventarioDAO configDAO;
 
-    public ArticuloService(ArticuloDAO articuloDAO, ArticuloProveedorDAO articuloProveedorDAO, ConfiguracionGestionInventarioDAO configDAO) {
-        this.articuloDAO = articuloDAO;
-        this.articuloProveedorDAO = articuloProveedorDAO;
-        this.configDAO = configDAO;
+    public ArticuloService() {
+        this.articuloDAO = new ArticuloDAO();
     }
 
-    public void calcularModeloLoteFijo(Long articuloId) {
-        
+    public void guardarArticulo(Articulo articulo) {
+        articuloDAO.guardar(articulo);
     }
 
-    public List<Articulo> obtenerProductosAReponer() {
-        return articuloDAO.listarProductosAReponer();
+    public Articulo obtenerPorId(Long id) {
+        return articuloDAO.buscarPorId(id);
     }
 
-    public List<Articulo> obtenerProductosFaltantes() {
-        return articuloDAO.listarProductosFaltantes();
+    public List<Articulo> obtenerTodos() {
+        return articuloDAO.listarTodos();
     }
 
+    public void eliminarArticulo(Articulo articulo) {
+        articuloDAO.bajaArticulo(articulo.getId());
+    }
+
+    public void actualizarArticulo(Articulo articulo) {
+        articuloDAO.actualizar(articulo);
+    }
 }

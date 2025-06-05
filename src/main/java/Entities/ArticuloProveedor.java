@@ -29,7 +29,7 @@ public class ArticuloProveedor {
     private LocalDateTime fechaHoraBaja;
 
     @Column(name = "precio_unitario")
-    private Integer precioUnitario;
+    private float precioUnitario;
     
     @Column(name = "costo_pedido")
     private float costoPedido;

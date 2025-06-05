@@ -2,6 +2,8 @@ package DAO;
 
 import Entities.ArticuloProveedor;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 import jakarta.persistence.TypedQuery;
 
 import java.util.List;
@@ -10,10 +12,10 @@ import java.time.LocalDateTime;
 
 public class ArticuloProveedorDAO {
 
-    private EntityManager em;
+    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("tuUnidadPersistencia");
+    EntityManager em = emf.createEntityManager();
 
-    public ArticuloProveedorDAO(EntityManager em) {
-        this.em = em;
+    public ArticuloProveedorDAO() {
     }
 
     public void guardar(ArticuloProveedor ap) {

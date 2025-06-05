@@ -22,6 +22,9 @@ public class Articulo {
     @Column(name = "cod_articulo", nullable = false)
     private Integer codArticulo;
 
+    @Column(name = "nombre", nullable = false)
+    private String nombre;
+    
     @Column(name = "descripcion_articulo", nullable = false)
     private String descripcionArticulo;
 

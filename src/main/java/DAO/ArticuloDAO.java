@@ -1,16 +1,21 @@
 package DAO;
 
 import Entities.Articulo;
+import Entities.ArticuloProveedor;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 import jakarta.persistence.TypedQuery;
+import java.time.LocalDateTime;
 
 import java.util.List;
 
 public class ArticuloDAO {
-    private EntityManager em;
+    
+    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("tuUnidadPersistencia");
+    EntityManager em = emf.createEntityManager();
 
-    public ArticuloDAO(EntityManager em) {
-        this.em = em;
+    public ArticuloDAO() {
     }
 
     public Articulo buscarPorId(Long id) {
@@ -31,6 +36,16 @@ public class ArticuloDAO {
 
     public List<Articulo> listarTodos() {
         return em.createQuery("SELECT a FROM Articulo a", Articulo.class).getResultList();
+    }
+    
+    public void bajaArticulo(Long artid){
+        Articulo art = em.find(Articulo.class, artid);
+        if (art != null) {
+            em.getTransaction().begin();
+            art.setFechaHoraBaja(LocalDateTime.now());
+            em.getTransaction().commit();
+        }
+        
     }
 
     // Artículos a reponer: stockActual <= puntoPedido

@@ -1,7 +1,6 @@
 
 package com.mycompany.katalogon;
 
-import Entities.Articulo;
 import UI.MainMenu;
 import org.hibernate.Session;
 

@@ -10,7 +10,14 @@ public class MainMenu extends javax.swing.JFrame {
                 new ListadoProveedores().setVisible(true);
                 dispose(); // opcional: cierra MainMenu si querés evitar múltiples ventanas abiertas
             }
-});
+        });
+        
+        btnArticulos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                new ListadoArticulos().setVisible(true);
+                dispose(); // opcional: cierra MainMenu si querés evitar múltiples ventanas abiertas
+            }
+        });
 
         
     }
