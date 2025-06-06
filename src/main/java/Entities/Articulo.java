@@ -56,6 +56,7 @@ public class Articulo {
         joinColumns = @JoinColumn(name = "articulo_id"),
         inverseJoinColumns = @JoinColumn(name = "proveedor_id")
     )
+    
     private List<Proveedor> proveedores;
 
     

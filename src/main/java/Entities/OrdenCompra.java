@@ -9,6 +9,7 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import Entities.EstadoOrdenCompra;
 
 @Entity
 @Table(name = "orden_compra")
@@ -21,11 +22,15 @@ public class OrdenCompra {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "estado")
+    private EstadoOrdenCompra estado;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "proveedor")
+    private Proveedor proveedor;
     
     @OneToMany(mappedBy = "orden_compra")
-    private List<OCArticuloProveedor> articuloProveedor;
-    
-    @OneToMany(mappedBy = "orden_compra")
-    private List<OrdenCompraEstado> estado;
+    private List<OrdenCompraDetalle> ordenCompraDetalleList;
     
 }

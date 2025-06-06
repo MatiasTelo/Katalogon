@@ -10,13 +10,13 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "oc_articulo_proveedor")
+@Table(name = "oc_detalle")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class OCArticuloProveedor {
+public class OrdenCompraDetalle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -25,10 +25,10 @@ public class OCArticuloProveedor {
     private Integer cantidad;
 
     @ManyToOne
-    @JoinColumn(name = "articulo_proveedor_id")
-    private ArticuloProveedor articuloProveedor;
+    @JoinColumn(name = "articulo")
+    private Articulo articulo;
     
     @ManyToOne(optional = false)
-    @JoinColumn(name = "ordencompra_id")
+    @JoinColumn(name = "orden_compra")
     private OrdenCompra orden_compra;
 }

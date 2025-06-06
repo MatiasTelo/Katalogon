@@ -1,6 +1,7 @@
 package DAO;
 
 import Entities.ArticuloProveedor;
+import Entities.Proveedor;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
@@ -59,4 +60,23 @@ public class ArticuloProveedorDAO {
             .setParameter("articuloId", articuloId)
             .getResultList();
     }
+
+    public List<ArticuloProveedor> listarPorProveedor(Proveedor proveedor) {
+        return em.createQuery("""
+                SELECT ap FROM ArticuloProveedor ap
+                WHERE ap.proveedor = :proveedor AND ap.fechaHoraBaja IS NULL
+            """, ArticuloProveedor.class)
+            .setParameter("proveedor", proveedor)
+            .getResultList();
+    }
+
+    public List<ArticuloProveedor> listarPorProveedorPredeterminado(Proveedor proveedor) {
+        return em.createQuery("""
+                SELECT ap FROM ArticuloProveedor ap
+                WHERE ap.proveedor = :proveedor AND ap.fechaHoraBaja IS NULL AND ap.esPredeterminado = true
+            """, ArticuloProveedor.class)
+            .setParameter("proveedor", proveedor)
+            .getResultList();
+    }
+
 }

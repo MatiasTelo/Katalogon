@@ -4,7 +4,6 @@ package com.mycompany.katalogon;
 import UI.MainMenu;
 import org.hibernate.Session;
 
-
 public class Katalogon {
 
     public static void main(String[] args) {

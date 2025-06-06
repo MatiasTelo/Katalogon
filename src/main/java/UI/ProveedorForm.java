@@ -34,11 +34,12 @@ public class ProveedorForm extends JFrame {
 
         jButton1.addActionListener(e -> {
             String nombre = txtNombreProv.getText().trim();
+
+            // PONER TODA ESTA LÓGICA EN EL SERVICE
             if (nombre.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "El nombre no puede estar vacío.", "Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-
             if (proveedorExistente == null) {
                 proveedorService.crearProveedor(nombre);
                 JOptionPane.showMessageDialog(this, "Proveedor creado con éxito.");
