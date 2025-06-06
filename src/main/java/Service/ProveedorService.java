@@ -12,11 +12,12 @@ public class ProveedorService {
     private final ProveedorDAO proveedorDAO = new ProveedorDAO();
     private final ArticuloProveedorDAO articuloProveedorDAO = new ArticuloProveedorDAO();
 
-    public void crearProveedor(String nombre) {
+    public Proveedor crearProveedor(String nombre) {
         Proveedor proveedor = Proveedor.builder()
                 .nombreProveedor(nombre)
                 .build();
         proveedorDAO.guardar(proveedor);
+        return proveedor;
     }
 
     public void actualizarProveedor(Proveedor proveedor) {

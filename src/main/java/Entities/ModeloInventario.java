@@ -22,6 +22,6 @@ public class ModeloInventario {
     private Long id;
 
     @Column(name = "nombre_metodo")
-    private Integer nombreMetodo;
+    private String nombreMetodo;
 }
 

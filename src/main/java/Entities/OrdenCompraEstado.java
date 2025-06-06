@@ -27,8 +27,7 @@ public class OrdenCompraEstado {
     @Column(name = "fecha_hora_inicio")
     private LocalDateTime fechaHoraInicio;
 
-    @ManyToOne
-    @JoinColumn(name = "estado_orden_compra_id")
+    @Column(name = "estado_orden_compra")
     private EstadoOrdenCompra estadoOrdenCompra;
     
     @ManyToOne(optional = false)

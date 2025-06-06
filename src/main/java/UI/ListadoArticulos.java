@@ -47,7 +47,7 @@ public class ListadoArticulos extends javax.swing.JFrame {
                 if (col == 3) { // Columna "Acción"
                     Long idArticulo = (Long) tablaArticulos.getValueAt(row, 0);
                     Articulo articulo = articuloService.obtenerPorId(idArticulo);
-                    ArticuloProveedorForm form = new ArticuloProveedorForm(articulo);
+                    ArticuloProveedorForm2 form = new ArticuloProveedorForm2(articulo);
                     form.setVisible(true);
                 }
             }
